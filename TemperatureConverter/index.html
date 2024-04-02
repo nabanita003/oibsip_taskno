@@ -24,7 +24,7 @@
         }
 
         .container h1 {
-            color: black;
+            color: whitesmoke;
             padding-bottom: 50px;
             font-weight: 700;
             font-size: 35px;
@@ -84,9 +84,19 @@
 
         .T-icon {
             font-size: 40px;
-            color: black;
+            color: whitesmoke;
             margin-bottom: 20px;
-			padding-left: 10px;
+			padding-left: 20px;
+        }
+        .icon{
+            font-size: 40px;
+            flex:3;
+            height:50px;
+            line-height: 50px;
+            font-weight: 500;
+            background: transparent;
+            color: aliceblue;
+            border-radius: 0 10px 10px 0;
         }
     </style>
 </head>
@@ -98,16 +108,19 @@
             <div class="col">
                 <label>Fahrenheit</label>
                 <input type="number" id="fahrenheit" placeholder="Fahrenheit">
+                <span class="icon">&#8457</span>
             </div>
 
             <div class="col">
                 <label>Celsius</label>
                 <input type="number" id="celsius" placeholder="Celsius">
+                <span class="icon">&#8451</span>
             </div>
 
             <div class="col">
                 <label>Kelvin</label>
                 <input type="number" id="kelvin" placeholder="Kelvin">
+                <span class="icon">&#8490</span>
             </div>
 
             <div class="button">
