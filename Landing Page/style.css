@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.class{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),url(house.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.Nav{
+    width: 85%;
+    margin:auto;
+    padding:35px 0;
+    justify-content: space-between;
+    align-items: center;
+    display:flex;
+}
+.Logo{
+    width: 120px;
+    cursor:pointer; 
+}
+
+.Nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 6px; 
+    position:relative; 
+}
+
+.dropdown ul li:hover{
+  background-color:rgba(0,0,0,0.2);
+   color : white;/* text color */
+}
+
+.Nav ul li a{
+    text-decoration: none;
+    color:beige;
+    text-transform: uppercase;
+    display:inline-block;
+    padding:10px;
+}
+.Nav ul li::after{
+    content:'';
+    height:3px;
+    width:0;
+    background:white;
+    position:absolute;
+    left:0;
+    bottom:-4px;
+    transition:0.5s;
+}
+.Nav ul li:hover::after{
+    width:100%;
+}
+.content{
+    width:100%;
+    position:absolute;
+    top:50%;
+    transform:translate3d(50%);
+    text-align: center;
+    color: aliceblue;
+   
+}
+.content h1{
+    font-size: 80px;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight:100;
+    line-height:25px;
+}
+button{
+    width:200px;
+    padding:15px 0;
+    text-align:center;
+    margin:20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid gold;
+    background: transparent;
+    color: #fff;
+    cursor:pointer;
+   
+}
+button:hover{
+    background: goldenrod;
+    transition:0.2ms;
+}
+.dropdown{margin-top :1px;
+    display: none;}
+ul li:hover .dropdown{
+    display:block;
+    position: absolute;
+    margin-left: -0.3cm;
+    margin-top: 0.4cm;
+    margin-bottom: -0.3cm;
+}
+ .dropdown ul li{
+    display: inline-block;
+    background:white;
+    width:110%;
+    color: rgba(0, 0, 0, 0.29);
+}
+

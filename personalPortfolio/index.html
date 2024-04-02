@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<style>
+    *{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+body{
+    background: #081b29;
+    color:#ededed;
+}
+.header{
+    position:fixed;
+    top:50px;
+    left:0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color:#ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+.logo::before{
+    content: '';
+    position: absolute;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 4s;
+}
+.navbar a{
+  font-size: 18px;
+  color:#ededed;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 0.2s;
+}
+.navbar a:hover,
+.navbar a.active{
+    color:aqua;
+}
+.home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.content{
+    max-width: 600px;
+}
+.content h1{
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.content h1::before{
+    content: '';
+    position: absolute;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+.content h3{
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color:rgb(0, 204, 255)
+}
+.content h3::before{
+    content: '';
+    position: absolute;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2s;
+}
+.content p{
+    position: relative;
+   font-size: 16px;
+   margin:20px 0 40px;
+}
+.content p::before{
+    content: '';
+    position: absolute;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2s;
+}
+/* .btn{
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+} */
+.content .btn{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+.content .btn::before{
+    content: '';
+    position: absolute;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
+}
+.btn a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color:#00abf0;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    z-index:- 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.btn a:hover{
+    color:#00abf0;
+}
+.btn a:nth-child(1) {
+    background: aqua; /* Change background color to aqua */
+    color: #081b29; /* Change text color to contrast with aqua */
+    border-color: aqua; /* Change border color to aqua */
+}
+.btn a:nth-child(2){
+    background: transparent;
+    color:#00abf0;
+}
+.btn a:nth-child(2):hover{
+    color:#081b29;
+}
+.btn a:nth-child(2)::before{
+    background: #00abf0;
+}
+.btn a::before{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: 0.5s;
+}
+.btn a:hover::before{
+    width: 100%;
+}
+.home-sci{
+    position:absolute;
+    bottom: 40px;
+    width:170px;
+    background: transparent;
+    display:flex;
+    justify-content: space-between;
+}
+.home-sci a:hover{
+    color:#00abf0;
+}
+.btn a{
+    background: transparent;
+    color:#00abf0;
+}
+.home-sci::before{
+    content: '';
+    position: absolute;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 2;
+}
+.home-sci a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border:2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color:#00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .3s;
+}
+.home-sci a:hover{
+    color:#081b29;
+}
+.home-sci a::before{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width:0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before{
+    width:100%;
+}
+
+.home-imghover{
+    position: absolute;
+    top:0;
+    right: 30px;
+    width: 500px;
+    height: 100%;
+    background: transparent;
+    border: 2px solid transparent;
+    transition:.3s;
+
+}
+.home-imghover:hover{
+    background:#081b29;
+    opacity: .8;
+    animation: manipActivetiover .1s forwards;
+    animation-delay: 4s ;
+    pointer-events: none;
+}
+.home-imghover::after{
+    content: '';
+    position: absolute;
+    top:0;
+    right:0;
+    width: 200%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 100;
+}
+@keyframes showRight{
+    100% {
+        width:0;
+    }
+}
+@keyframes manipActivetiover  {
+    100%{
+        pointer-events: auto;
+    }
+}
+.home-imghover:hover{
+    background:#081b29;
+    opacity: .8;
+}
+.image{
+    margin-top: 300px; margin-bottom: 200px; 
+    /* Adjust size of the image */
+    height: 650px;
+/* Adjust size of the image */
+    border-radius: 50%; /* Make the image circular */
+    overflow:hidden;
+    background-position: 50% 50%;
+    display: flex; 
+    margin-left: auto; /* Push the image to the right */
+    margin-right: 10px; /* Add some margin between content and image */
+}
+
+</style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Logo</a>
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Skills</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="content">
+            <h1>Hi, I'm Rimi Bardhan</h1>
+            <h3>Frontend Developer</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptatem adipisci vel tempora distinctio dolorem veniam optio soluta, aspernatur voluptas saepe, animi amet at similique nulla. Quam.</p>
+            <div class="btn">
+                <a href="#">Hire Me</a>
+                <a href="#">Download CV</a>
+            </div>
+        </div>
+        <div class="image">
+            <img src="bgc-image.png" alt="Error loading page">
+        </div>
+
+        <div class="home-sci">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+        </div>
+        
+        <span class="home-imghover"></span>
+    </section>
+</body>
+</html>
